@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets\style.css">
+    <div class="point-time">
+        <figure class="points"> points: <data id="points">0</data></figure>
+            <data id="timer">Timer 0</data>
+    </div>
+</head>
+<body>
+    <main>
+        <div class="questions1">
+            <h2 id="Q1">what is a fruit?</h2>
+            <button id="answerA">A.apple</button>
+            <button id="answerB">B.nail</button>
+            <button id="answerC">C.wood</button>
+            <button id="answerD">D.water</button>
+        </div>
+        <div class="questions2">
+            <h2 id="Q1">what is a hard?</h2>
+            <button id="answerA">A.phone</button>
+            <button id="answerB">B.a towle</button>
+            <button id="answerC">C.toys</button>
+            <button id="answerD">D.granit</button>
+        </div>
+        <div class="questions3">
+            <h2 id="Q1">what is a soft?</h2>
+            <button id="answerA">A.apple</button>
+            <button id="answerB">B.nail</button>
+            <button id="answerC">C.wood</button>
+            <button id="answerD">D.cotton</button>
+        </div>
+        <div class="questions4">
+            <h2 id="Q1">what is a pokie?</h2>
+            <button id="answerA">A.a fether</button>
+            <button id="answerB">B.nail</button>
+            <button id="answerC">C.a dalfi</button>
+            <button id="answerD">D.paper</button>
+        </div>
+    </main>
+    <script>
+        const answerA = document.getElementById(`answerA`)
+        answerA.addEventListener(`click` , function(e)  {
+            console.log(this)
+             });
+
+        const answerB = document.getElementById(`answerB`)
+            answerB.addEventListener(`click` , function(e)  {
+                console.log(this)
+                });
+
+        const answerC = document.getElementById(`answerC`)
+            answerC.addEventListener(`click` , function(e)  {
+                console.log(this)
+                });
+                
+        const answerD = document.getElementById(`answerD`)
+            answerD.addEventListener(`click` , function(e)  {
+                console.log(this)
+                });
+       
+    </script>
+    <script>src="./assets/index.js"</script>
+</body>
+</html>
