@@ -1,1 +1,1 @@
-# j.s-quiz
+# simple j.s-quiz
