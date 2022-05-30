@@ -6,64 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets\style.css">
-    <div class="point-time">
-        <figure class="points"> points: <data id="points">0</data></figure>
-            <data id="timer">Timer 0</data>
-    </div>
+        <div class="point-time">
+            <figure class="points"> Points: <data id="points">0</data></figure>
+            <figure class="timerDisplay">Time: <data id="countdown">1:00</data></figure>
+        </div>
 </head>
-<body>
-    <main>
-        <div class="questions1">
-            <h2 id="Q1">what is a fruit?</h2>
-            <button id="answerA">A.apple</button>
-            <button id="answerB">B.nail</button>
-            <button id="answerC">C.wood</button>
-            <button id="answerD">D.water</button>
+<body> 
+    <div id="start">
+        <h1>JavaScript Quiz</h1> <br>
+        <button id="Start">Start</button>
+    </div>
+    <main id="quiz">
+        <div class="question displayable" id="q0">
+            <h2 id="Q0">What are the collection of instructions that make up a  JavaScript program called? </h2>
+            <button  id="answerA0" class="correct answerButton">A.Statements</button>
+            <button class="answerButton" id="answerB0">B.Interrogatories</button>
+            <button class="answerButton" id="answerC0">C.Directions</button>
+            <button class="answerButton" id="answerD0">D.Multiverses</button>
         </div>
-        <div class="questions2">
-            <h2 id="Q1">what is a hard?</h2>
-            <button id="answerA">A.phone</button>
-            <button id="answerB">B.a towle</button>
-            <button id="answerC">C.toys</button>
-            <button id="answerD">D.granit</button>
+        <div class="question displayable" id="q1">
+            <h2 id="Q1">Which of the following is not one of the three primitive data types associated with JavaScript? </h2>
+            <button class="answerButton" id="answerA1">A.Boolean</button>
+            <button  class="answerButton"id="answerB1">B.String</button>
+            <button  class="answerButton"id="answerC1">C.Number</button>
+            <button  class="answerButton"id="answerD1" class="correct answerButton">D.Boogieman</button>
         </div>
-        <div class="questions3">
-            <h2 id="Q1">what is a soft?</h2>
-            <button id="answerA">A.apple</button>
-            <button id="answerB">B.nail</button>
-            <button id="answerC">C.wood</button>
-            <button id="answerD">D.cotton</button>
+        <div class="question displayable" id="q2">
+            <h2 id="Q2">In JavaScript, null is:</h2>
+            <button class="answerButton" id="answerA2">A.The absence of value</button>
+            <button class="answerButton" id="answerB2">B.A secret password </button>
+            <button class="answerButton" id="answerC2">C.Magic</button>
+            <button id="answerD2" class="correct answerButton">D.An object</button>
         </div>
-        <div class="questions4">
-            <h2 id="Q1">what is a pokie?</h2>
-            <button id="answerA">A.a fether</button>
-            <button id="answerB">B.nail</button>
-            <button id="answerC">C.a dalfi</button>
-            <button id="answerD">D.paper</button>
+        <div class="question displayable" id="q3">
+            <h2 id="Q3">Which of the following was a prior name for JavaScript:</h2>
+            <button  class="answerButton" id="answerA3">A.CocoaScript</button>
+            <button   id="answerB3" class="correct answerButton">B.CappuccinoScript</button>
+            <button  class="answerButton" id="answerC3">C.SpaghettiScript</button>
+            <button  class="answerButton" id="answerD3">D.LiveScript</button>
         </div>
     </main>
     <script>
-        const answerA = document.getElementById(`answerA`)
-        answerA.addEventListener(`click` , function(e)  {
-            console.log(this)
-             });
-
-        const answerB = document.getElementById(`answerB`)
-            answerB.addEventListener(`click` , function(e)  {
-                console.log(this)
-                });
-
-        const answerC = document.getElementById(`answerC`)
-            answerC.addEventListener(`click` , function(e)  {
-                console.log(this)
-                });
-                
-        const answerD = document.getElementById(`answerD`)
-            answerD.addEventListener(`click` , function(e)  {
-                console.log(this)
-                });
-       
+    
+      
+        
     </script>
-    <script>src="./assets/index.js"</script>
+    <script src="./assets/index.js"></script>
 </body>
 </html>

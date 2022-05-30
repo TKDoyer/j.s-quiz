@@ -1,0 +1,146 @@
+------ Visuals -------
+Startup screen
+    Quiz Description
+    Start Button
+
+Quiz screen
+    Active timer
+    Questions
+    Correct/Incorrect statement
+    View High Scores
+
+Score screen
+    Entry for box for initials
+    Save Button
+    Display of Score
+
+High score screen
+    Title
+    List of High Scores
+    Clear Button
+    Back Button
+
+
+------- Logic ------
+Start Button
+    display(firstQuestion)
+    startTimer(75)
+
+startTimer(duration)
+    Set starting seconds
+    Every second, do timerTask()
+        
+timerTask()
+    lower the number of seconds by 1
+    timerText = get the timer data element by ID of "timer"
+    Display changes to reflect <numOfSeconds>
+
+showDiv(foo) - Display a div function
+    displayableDivs = get all elements with class "displayable"
+    for every displayable div
+        Set display property to none
+    Set display property of foo to block
+
+Answer Buttons 0-2
+    clickedButton = get button that was clicked (e.target?)
+    If the button clicked is missing the correct class (x.classList.contains)
+        Subtract 10 seconds from timer        
+    showDiv(<nextQuestion>)
+
+Final Answer Button
+    clickedButton = get button that was clicked (e.target?)
+    If the button clicked is missing the correct class (x.classList.contains)
+        Subtract 10 seconds from timer  
+    StopTimer
+    showDiv(scoreScreen) 
+
+Save Initials Button
+    Save the current initials and score to a list of players
+        Updating list in memory
+        Refreshing displayed list
+    showDiv(highScores)
+
+Clear Button
+    Reset the player list to blank
+    Refresh the displayed list
+
+Go back Button
+    showDiv(start)
+    Update timer back to 0
+
+
+
+
+
+
+
+
+
+
+End of Quiz
+    stop timer
+    save score
+    display(initialis screen)
+
+
+
+        
+
+
+Timer Example
+--------------------
+
+What is an interval?
+An object that Javascript creates and manages for you that 
+will do *something* that you tell it to over and over at a certain
+interval
+
+---- code ---
+x = 0
+
+x++ // 1
+x == 2 // false
+++x == 2 // true
+
+---- memory ---
+x = 2
+
+
+let timerId;
+function startTimer(duration, display) {
+    let timer = duration;
+    let minutes;
+    let seconds;
+    
+    let timerTask = function() {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+        x = 0
+        
+        timer = timer -1
+        if (timer < 0) {
+            timer = duration;
+        }
+        
+        if (timer == 0) {
+            timer = "0:00"
+        }
+    }
+    timerId = setInterval(timerTask, 1000);
+}
+
+function resetTimer() {
+        clearInterval(timerId);
+}
+
+   
+function start10Timer() {
+    var tenMinutes = 60 * 10,
+    display = document.querySelector('#time10');
+    startTimer(tenMinutes, display);
+};
